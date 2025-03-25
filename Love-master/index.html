@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">Hey Nenshu,</span><br />
+			<span class="comments">March 26, 2024, I told you i love you.</span><br />
+<span class="comments">Luckily, you accepted and become my best girlfriend eversince<br />
+			<span class="comments"></span>And now its our<br />
+<span class="comments">Anniversary<br />
+<span class="comments">Wishing you the happiest 1st anniversary!</span><br />
+<span class="comments">Ever since you came into my life,<br />
+<span class="comments">everything has changed in the best way possible. </span><br />
+<span class="comments">Your love,</span><br />
+<span class="comments">Attention,</span><br />
+<span class="comments">Efforts,</span><br />
+<span class="comments">You put into us mean the world to me</span><br />
+<span class="comments">it's something I'll never forget. </span><br />
+<span class="comments">You are the sweetest, bravest,</span><br />
+<span class="comments">And most intelligent girl I've ever known</span><br />
+<span class="comments">and every moment with you feels so special. </span><br /><br />
+<span class="comments">I love the way you understand me without words, </span><br />
+<span class="comments">how you support me no matter what, </span><br />
+<span class="comments">and how just one smile from you can brighten my entire day. </span><br />
+<span class="comments">You’ve brought so much joy, love, and meaning into my life, </span><br />
+<span class="comments">and I can't imagine a single day without you. </span><br />
+<span class="comments">Thank you for always being there, for loving me the way you do, </span><br />
+<span class="comments">and for making every moment feel magical. </span><br />
+<br />
+<span class="comments">// Here’s to us, to our love, and to many more beautiful years together! ❤️✨</span><br />
+
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Nenshu, I have fallen in love with you for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love you forever and ever.<br/>
+						<div class="signature">- Soham</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<script type="text/javascript">
+			var offsetX = $("#loveHeart").width() / 2;
+			var offsetY = $("#loveHeart").height() / 2 - 55;
+		
+			// Set the start date (March 26, 2024, 12:00 AM)
+			var together = new Date(2024, 2, 26, 0, 0, 0, 0); 
+		
+			if (!document.createElement('canvas').getContext) {
+				var msg = document.createElement("div");
+				msg.id = "errorMsg";
+				msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+				document.body.appendChild(msg);
+				$("#code").css("display", "none");
+				$("#copyright").css("position", "absolute");
+				$("#copyright").css("bottom", "10px");
+				document.execCommand("stop");
+			} else {
+				setTimeout(function () {
+					startHeartAnimation();
+				}, 5000);
+		
+				timeElapse(together);
+				setInterval(function () {
+					timeElapse(together);
+				}, 1000); // Updated to refresh every second
+		
+				adjustCodePosition();
+				$("#code").typewriter();
+			}
+		</script>
+		
